@@ -15,58 +15,62 @@ This guide will walk you through how to test the API endpoints using Postman. Th
 **URL:** `http://localhost:5000/register`  
 **Body (JSON):**
 
-```json
+json
 {
-  "name": "Alice Johnson",
-  "email": "alice@example.com",
-  "password": "securePass123"
+"name": "belachew kebede",
+"email": "belachew@example.com",
+"password": "securePass123"
 }
 
- 2. Login and Get a Token
+### 2. Login and Get a Token
+
 Method: POST
 URL: http://localhost:5000/login
 Body (JSON):
 {
-  "email": "belachew@example.com",
-  "password": "securePass123"
+"email": "belachew@example.com",
+"password": "securePass123"
 }
 Response:
 {
-  "token": "your-jwt-token-here"
+"token": "your-jwt-token-here"
 }
 
-3. Retrieve Users (Protected Route)
+### 3. Retrieve Users (Protected Route)
+
 Method: GET
 URL: http://localhost:5000/users
 Headers:
 Authorization: Bearer your-jwt-token-here
 
+###
+
 4. Update a User (Protected Route)
-Method: PUT
-URL: http://localhost:5000/users/1
-Headers:
-Authorization: Bearer your-jwt-token-here
+   Method: PUT
+   URL: http://localhost:5000/users/1
+   Headers:
+   Authorization: Bearer your-jwt-token-here
 
 Body (JSON):
 {
-  "name": "Updated rooney",
-  "email": "rooney@example.com"
+"name": "Updated rooney",
+"email": "rooney@example.com"
 }
 
 Response
 {
-  "message": "User with ID 1 updated successfully."
+"message": "User with ID 1 updated successfully."
 }
 
 5. Delete a User (Protected Route)
-Method: DELETE
-URL: http://localhost:5000/users/1
-Headers:
-Authorization: Bearer your-jwt-token-here
+   Method: DELETE
+   URL: http://localhost:5000/users/1
+   Headers:
+   Authorization: Bearer your-jwt-token-here
 
 Response:
 {
-  "message": "User with ID 1 deleted successfully."
+"message": "User with ID 1 deleted successfully."
 }
 
 Steps to Test
@@ -79,4 +83,7 @@ Retrieve Users: Use the /users endpoint with the JWT token in the headers to ret
 Update a User: Use the /users/{id} endpoint with the JWT token to update a user's details.
 
 Delete a User: Use the /users/{id} endpoint with the JWT token to delete a user.
+
+```
+
 ```
